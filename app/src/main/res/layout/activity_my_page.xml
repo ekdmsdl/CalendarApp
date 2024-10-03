@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 프로필 이미지 -->
+    <ImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/profile"
+        android:background="@drawable/circle_background2"
+        android:scaleType="centerCrop"/>
+
+    <!-- 마이페이지와 관련된 UI 요소들 -->
+    <TextView
+        android:id="@+id/myPageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="마이페이지"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- 버튼들을 감싸는 네모 박스 -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myPageTitle"
+        android:layout_marginTop="180dp"
+        android:background="@android:color/background_light"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- '알림설정' 버튼 -->
+        <Button
+            android:id="@+id/setReminderButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corners_background"
+            android:text="알림설정"
+            android:textSize="20dp"
+            android:textColor="#000000" />
+
+        <!-- '통계' 버튼 -->
+        <Button
+            android:id="@+id/statisticsButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corners_background"
+            android:text="통계"
+            android:textSize="20dp"
+            android:textColor="#000000" />
+
+        <!-- '요약' 버튼 -->
+        <Button
+            android:id="@+id/diarySummaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corners_background"
+            android:text="요약"
+            android:textSize="20dp"
+            android:textColor="#000000" />
+
+        <!-- '문의하기' 버튼 -->
+        <Button
+            android:id="@+id/contactAdminButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corners_background"
+            android:text="문의하기"
+            android:textSize="20dp"
+            android:textColor="#000000" />
+
+        <!-- '네이버 연동 해제' 버튼 -->
+        <Button
+            android:id="@+id/disconnectNaverButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corners_background"
+            android:text="네이버 연동 해제"
+            android:textSize="20dp"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- 메뉴 바 상단의 회색 선 -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/menuBar"
+        android:background="#C1C1C1" />
+
+    <!-- 메뉴 바 -->
+    <LinearLayout
+        android:id="@+id/menuBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="0dp">
+
+        <!-- 달력 메뉴 아이콘 -->
+        <ImageButton
+            android:id="@+id/calendarMenuButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="Calendar"
+            android:src="@drawable/calendar" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#D3D3D3" />
+
+        <!-- 투두리스트 메뉴 아이콘 -->
+        <ImageButton
+            android:id="@+id/todoListMenuButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/checked"
+            android:contentDescription="To-Do List"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#D3D3D3" />
+
+        <!-- 마이페이지 메뉴 아이콘 -->
+        <ImageButton
+            android:id="@+id/myPageMenuButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/user"
+            android:contentDescription="My Page"/>
+    </LinearLayout>
+</RelativeLayout>
+
